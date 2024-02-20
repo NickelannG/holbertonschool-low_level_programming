@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 /**
- * main will print "Programming is like building a multilingual puzzle", followed by a new line
+ * main will print "Programming is like building a multilingual puzzle", 
+ * followed by a new line
  *
  * program will end with the value 0
  */
