@@ -17,6 +17,10 @@ int main(void)
 	{
 		printf("positive\n");
 	}
+	else if ( n == 0)
+	{
+		printf("0\n");
+	}
 	else
 	{
 		printf("negative\n");
