@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/** main - prints whether a random number that is stored in the variable is
+/**
+ * main - prints whether a random number that is stored in the variable is
  * positive or negative
  *
  * Return: 0
