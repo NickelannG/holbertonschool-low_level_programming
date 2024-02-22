@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+
 /**
  * main - a program that prints the last digit of a random number that is
  * stored in the variable n followed by a newline
@@ -9,12 +10,12 @@
  */
 int main(void)
 {
-	int n;
-
+	int n, last_digit;
+	
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	int last_digit = n % 10;
+	last_digit = n % 10;
 
 	printf("Last digit of %d is ", n);
 	if (last_digit > 5)
