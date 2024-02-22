@@ -2,11 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/**
- * main - a program that prints the last digit of a random number that is
- * stored in the variable n followed by a newline
- *
- * Return: always 0
+/**                                                                                                                              
+ * main - a program that prints the last digit of a random number that is                                                        
+ * stored in the variable n followed by a newline                                                                                
+ *                                                                                                                               
+ * Return: always 0                                                                                                              
  */
 int main(void)
 {
@@ -18,10 +18,10 @@ int main(void)
 
 	printf("Last digit of %d is %d ", n, last_digit);
 	if (last_digit > 5)
-		printf("and is greater than 5\n");
+        	printf("and is greater than 5\n");
 	else if (last_digit == 0)
-		printf("and is 0\n");
+        	printf("and is 0\n");
 	else
-                printf("and is less than 6 and not 0\n");
+        	printf("and is less than 6 and not 0\n");
 	return (0);
 }
