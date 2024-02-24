@@ -2,14 +2,12 @@
 /**
  * _abs - computes the absolute value of an integer
  *
- * @int n: the integer to be checked
+ * @n: the integer to be checked
  *
  * Return: -n if n is a negative number, n if n is positive
  */
-int _abs(int)
+int _abs(int n)
 {
-	int n;
-
 	if (n < 0)
 	{
 		return (-n);
