@@ -12,27 +12,22 @@ void times_table(void)
 		for (col = 0; col <= 9; col++)
 		{
 			product = row * col;
+
 			if (col == 0)
 				_putchar('0'); /* Print first digit */
-
-			else
-				_putchar(' '); /* Add a space before number */
-
-			if (product >= 10) /* Print the product */
-			{
-				_putchar('0' + product / 10); /* Print tens digit */
-				_putchar ('0' + product % 10); /* prints ones digit */
-			}
 			else
 			{
-				_putchar(' '); /* Add a space before the single-digit */
-				_putchar(product + '0'); /* Print single digit */
-			}
+				_putchar (',');
+				_putchar(' ');
 
-			if (col < 9)
-				_putchar(','); /* Print comma and space */
-			else
-				_putchar('\n');
+				if (product < 10) /* Print tens digit (if greater that 9) */
+					_putchar(' ');
+				else
+					_putchar(product / 10 + '0');
+
+				_putchar(product % 10 + '0'); /* Print ones digit */
+			}
 		}
+		_putchar('\n');
 	}
 }
