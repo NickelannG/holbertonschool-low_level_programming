@@ -11,9 +11,13 @@ void more_numbers(void)
 
 	for (j = 0; j < 10; j++)
 	{
-		for (i = 0; i <= 14; i++)
+		for (i = 0; i < 15; i++)
 		{
-			_putchar(i + '0');
+			if (i > 9)
+			{
+				_putchar((i / 10) + '0'); /* Prints tens digit */
+			}
+			_putchar((i % 10) + '0'); /* prints the ones digit */
 		}
 		_putchar('\n');
 	}
