@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 /**
  *fizz_buzz - prints numbers from 1-100, followed by a new line
@@ -11,42 +12,28 @@ void fizz_buzz(void)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			printf("FizzBuzz");
 		}
 		else if (n % 3 == 0)
 		{
-			_putchar('F');
-			_putchar('i');
-			_putchar('z');
-			_putchar('z');
+			printf("Fizz");
 		}
 		else if (n % 5 == 0)
 		{
-			_putchar('B');
-			_putchar('u');
-			_putchar('z');
-			_putchar('z');
+			printf("Buzz");
 		}
 		else if (n < 10)
 		{
-			_putchar(n + '0');
+			printf("%d", n);
 		}
 		else
 		{
-			_putchar((n / 10) + '0');
-			_putchar((n % 10) + '0');
+			printf("%d", n);
 		}
 		if (n != 100)
 		{
-			_putchar(' ');
+			printf(" ");
 		}
 	}
-	_putchar('\n');
+	printf("\n");
 }
