@@ -3,8 +3,10 @@
 /**
  *fizz_buzz - prints numbers from 1-100, followed by a new line
  * for multiples of 3, prints fizz and for multiples of 5, prints buzz
+ *
+ * Return: Always 0
  */
-void fizz_buzz(void)
+int main(void)
 {
 	int n;
 
@@ -36,4 +38,5 @@ void fizz_buzz(void)
 		}
 	}
 	printf("\n");
+	return (0);
 }
