@@ -8,29 +8,28 @@
 void rev_string(char *s)
 {
 	/* Calculate length of string */
-	int length = 0; 
+	int length = 0;
+	char temp;
+	int i = 0;
 
 	while (s[length] != '\0')
 	{
 		length++;
-		s++;
 	}
 
-	s-= length; /*reset pointer to beginning of string */
-	
-	/* Initialize start and end point of string */
-	int start = 0;
-	int end = length - 1;
-
-	/* Swap start and end charcters */
-	while (start < end)
+	/**
+	 * Swap characters from beginning and end,
+	 * iterating halfway through string
+	 */
+	while (i < length / 2) /* Swapping 2 letters at a time */
 	{
-		char temp = s[start];
-		s[start] = s[end];
-		s[end] = temp;
-
-		/* Move towads center of string */
-		start++;
-		end--;
+		temp = s[i];
+		/**
+		 * Realpce current character from corresponding mirrored
+		 * position
+		 */
+		s[i] = s[length - 1 - i];
+		s[length - 1 - i] = temp;
+		i++; /* Move to next pair of characters */
 	}
 }
