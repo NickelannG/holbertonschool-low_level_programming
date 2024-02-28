@@ -25,7 +25,7 @@ void rev_string(char *s)
 	{
 		temp = s[i];
 		/**
-		 * Realpce current character from corresponding mirrored
+		 * Replace current character from corresponding mirrored
 		 * position
 		 */
 		s[i] = s[length - 1 - i];
