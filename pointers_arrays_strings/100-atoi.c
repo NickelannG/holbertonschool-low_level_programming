@@ -1,7 +1,7 @@
 #include "main.h"
 #include <limits.h>
 /**
- * _aoti - Function that converts a string to an integer
+ * _atoi - Function that converts a string to an integer
  *
  * @s: a pointer to the beginning of a string
  *
