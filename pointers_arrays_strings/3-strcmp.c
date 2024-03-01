@@ -17,7 +17,7 @@ int _strcmp(char *s1, char *s2)
 		 * Check if we've reached the end of both strings
 		 * (They're equal)
 		 */
-		if (*s1 == *s2)
+		if (*s1 == '\0')
 		{
 			return (0);
 		}
