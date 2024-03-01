@@ -12,8 +12,11 @@ void puts2(char *str)
 
 	while (str[i] != '\0') /* Loop until end of string */
 	{
-		_putchar(str[i]); /* Print the character at index i */
-		i += 2; /* increment by 2 */
+		if (i % 2 == 0) /* Check if index is even */
+		{
+			_putchar(str[i]); /* Print the character at index i */
+		}
+		i++; /* increment index character */
 	}
 	_putchar('\n');
 }
