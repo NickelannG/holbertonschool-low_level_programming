@@ -12,7 +12,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	char *dest_start = dest; /* Store the starting address of dest */
-	
+
 	/* Copying the ceontents of src to dest until null terminator */
 	while (*src)
 	{
