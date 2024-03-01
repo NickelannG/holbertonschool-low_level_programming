@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 	while (*src != '\0' && n-- > 0)
 	{
 		*ptr++ = *src++; /* Copy characters from src to dest */
-	{
+	}
 		*ptr = '\0'; /* Add numm terminator to end of dest */
 
 		return (dest); /* Return a pointer to teh resulting string dest */
