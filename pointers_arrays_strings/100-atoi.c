@@ -9,32 +9,34 @@
  */
 int _atoi(char *s)
 {
-	int i = 0; /* Array position */
-	int n = 0; /* Current number without sign */
-	int sign = 1; /* Sign of the number, initially positive */
+	int result = 0;
+	int sign = 1;
+	int size = 0;
+	int counter = 0;
+	int i;
+	int m = 1;
 
-	/* Skip leading non-digit characters and handle sign */
-	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9'))
+	while (*(s + counter) != '\0')
 	{
-		/* If a '-' is encountered, change sign to negative */
-		if (s[i] == '-')
+		if (size > 0 && (*(s + counter) < '0' || *(s + counter) > '9'))
+			break;
+
+		if (*(s +  counter) == '-')
+			sign *= -1;
+
+		if ((*(s + counter) >= '0') && (*(s + counter) <= '9'))
 		{
-			/* Multiply current sign by -1 to toggle between positive and negative */
-			sign = sign * -1;
+			if (size > 0)
+				m *= 10;
+			size++;
 		}
-		i = i + 1; /* Move to next character in string */
+		counter++;
 	}
 
-	/* If the end of string is not reached and a digit is encountered */
-	if (s[i] != '\0')
+	for (i = counter - size; i < counter; i++)
 	{
-		/* Parse the digits of the number */
-		while (s[i] >= '0' && s[i] <= '9')
-		{
-			/* convert character to integer */
-			n = n * 10 + (s[i] - '0');
-			i = i + 1; /* Move to the next character */
-		}
+		result = result + ((*(s + i) - 48) * m);
+		m /= 10;
 	}
-	return (sign * n); /* return the parsed number with appropriate sign */
+	return (result * sign);
 }
