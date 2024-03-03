@@ -1,16 +1,29 @@
 #include "main.h"
 /**
- * cap_string - a functioon that capitalizes all words of a string
+ * cap_string - a function that capitalizes all words of a string
  *
  * @str: string to be modified
  *
- * Retunr: modified string
+ * Return: modified string
  */
-char *cap_string(char *)
+char *cap_string(char *str)
 {
-	char *ptr = str; /* Initialise pointer to a string */
+	int i = 0;
 
-	while (*ptr != '0') /* loop through string until null */
+	while (str[i] != '\0')
 	{
-		if (*ptr >= 97 && *ptr <= 122 ||
+		/* Check for separators */
+		if ((i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' ||
+		str[i - 1] == '\n' || str[i - 1] == ',' || str[i - 1] == ';'
+		|| str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?'
+		|| str[i - 1] == '"' || str[i - 1] == '(' || str[i - 1] == ')'
+		|| str[i - 1] == '{' || str[i - 1] == '}')
+		&& (str[i] >= 'a' && str[i] <= 'z'))
+		{
+			str[i] -= 32; /* Convert to upper */
+		}
+		i++;
+	}
+
+	return (str);
 }
