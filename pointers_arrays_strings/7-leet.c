@@ -2,40 +2,31 @@
 /**
  * leet - a function that encodes a string into 1337
  *
- * @s: string o be modified
+ * @s: string to be modified
  *
  * Return: modified string
  */
 char *leet(char *s)
 {
-	/* Pointer to iterate through the input string */
-	char *ptr = s;
+	char src[] = "AaEeOoTtlL";
+	char leet[] = "4433007711";
+	char *temp = s; /* Temporary pointer to start of input string */
+	int i;
 
-	/* Array of characters to be replaced */
-	char a[] = "aeotl";
-	/* Array of corresponding 1337 replacements */
-	char n[] = "43071";
-	int i; /* Loop counters */
-
-	/* Loop each character in the input string */
-	while (*ptr)
+	while (*s != '\0')
 	{
-		for (i = 0; a[i]; i++)
+		i = 0;
+		while (i < 10)
 		{
-			if (*ptr == a[i])
+			/* Check if character in input matches src characters */
+			if (*s == src[i])
 			{
-				*ptr = n[i];
-				break;
+				*s = leet[i]; /* Replace with replacement character */
+				break; /* Exit from inner loop */
 			}
-			else if (*ptr >= 'A' && *ptr <= 'Z' && *ptr - 'A'
-					== a[i])
-			{
-				*ptr = n[i];
-				*ptr += 32;
-				break;
-			}
+			i++; /* Move to next character in source array */
 		}
-		ptr++;
+		s++; /* Move onto next character in input string */
 	}
-	return (s);
+	return (temp); /* Return pointer to start of modified string */
 }
