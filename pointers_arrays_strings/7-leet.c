@@ -16,23 +16,23 @@ char *leet(char *s)
 	/* Array of corresponding 1337 replacements */
 	char n[] = "43071";
 	int i; /* Loop counters */
-	char lower;
 
 	/* Loop each character in the input string */
 	while (*ptr)
 	{
 		for (i = 0; a[i]; i++)
 		{
-			lower = *ptr;
-			if (lower >= 'A' && lower <= 'Z')
+			if (*ptr == a[i])
 			{
-				lower += 32; /* Convert to lowercase */
+				*ptr = n[i];
+				break;
 			}
-			/* Check if lowercase character matches replacement */
-			if (lower == a[i])
+			else if (*ptr >= 'A' && *ptr <= 'Z' && *ptr - 'A'
+					== a[i])
 			{
-				*ptr = n[i]; /* Replace character with 1337 */
-				break; /* Exti inner loop if match is found */
+				*ptr = n[i];
+				*ptr += 32;
+				break;
 			}
 		}
 		ptr++;
