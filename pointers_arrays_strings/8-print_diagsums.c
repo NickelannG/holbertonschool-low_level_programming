@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 
 	while (i < size) /* Sum of second diagonal */
 	{
-		sum2 += a[(size -1) + ((size - 1) * i)];
+		sum2 += a[(size - 1) + ((size - 1) * i)];
 		i++;
 	}
 	printf("%d %d\n", sum1, sum2);
