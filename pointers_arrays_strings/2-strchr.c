@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 		if (*s == c)
 		{
 			/* Return pointer to current character */
-			return ((char *)s);
+			return (s);
 		}
 		s++;
 	}
