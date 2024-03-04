@@ -12,12 +12,18 @@ char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
 	{
-		if (*s == c)
+		if (*s != c)
 		{
-			/* Return pointer to current character */
+			s++;
+		}
+		else
+		{
 			return (s);
 		}
-		s++;
 	}
-	return ((void *)0); /* If character not found */
+	if (c == '\0')
+	{
+		return (s);
+	}
+	return ('\0'); /* If character not found */
 }
