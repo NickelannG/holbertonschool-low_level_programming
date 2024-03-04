@@ -24,13 +24,6 @@ void print_diagsums(int *a, int size)
 				/* Add value at position a[i][j] to sum2 */
 				sum1 += *(a + i * size + j);
 			}
-			j++;
-		}
-		j = 0; /* Reset */
-
-		/* Sum of secondary column */
-		while (j < size)
-		{
 			if (i + j == size - 1)
 			{
 				sum2 += *(a + i * size + j);
