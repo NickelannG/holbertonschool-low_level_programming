@@ -13,23 +13,16 @@ void print_diagsums(int *a, int size)
 	int sum2 = 0; /* Sum of second diagonal */
 	int i = 0;
 
-	while (i < size) /* Rows */
+	while (i < size) /* Sum of first diagonal */
 	{
-		int j = 0;
+		sum1 += a[(i * size) + i];
+		i++;
+	}
+	i = 0; /* Reset */
 
-		while (j < size) /* Columns */
-		{
-			if (i == j)
-			{
-				/* Add value at position a[i][j] to sum2 */
-				sum1 += *(a + i * size + j);
-			}
-			if (i + j == size - 1)
-			{
-				sum2 += *(a + i * size + j);
-			}
-			j++;
-		}
+	while (i < size) /* Sum of second diagonal */
+	{
+		sum2 += a[(size -1) + ((size - 1) * i)];
 		i++;
 	}
 	printf("%d %d\n", sum1, sum2);
