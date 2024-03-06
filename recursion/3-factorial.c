@@ -5,7 +5,7 @@
  * @n: a number we are finding the factorial of
  *
  * Return: the factorial of a given number. If n is lower than zero,
- * return -1.
+ * return -1. If n = 0, return 1
  */
 int factorial(int n)
 {
