@@ -14,6 +14,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *p;
 	unsigned int total;
+	unsigned int i = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -24,6 +25,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (p == NULL)
 		return (NULL);
+
+	for (i = 0; i < total; i++)
+		*((char *) p + i) = 0; /* Dereferencing pointer */
 
 	return (p);
 }
