@@ -35,4 +35,6 @@ void print_binary(unsigned long int n)
 			_putchar(bit + '0');
 		i--;
 	}
+	if (leading_zero)
+		_putchar('0');
 }
