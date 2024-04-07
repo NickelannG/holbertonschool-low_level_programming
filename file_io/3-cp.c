@@ -75,6 +75,11 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
+	if (bytesread == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+		exit(98);
+	}
 	if (close(fd1) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
