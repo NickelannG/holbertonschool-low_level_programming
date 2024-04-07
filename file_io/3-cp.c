@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 		byteswritten = write(fd2, buffer, bytesread);
 		if (byteswritten != bytesread)
 		{
-			dprintf(STDERR_FILENO, "Error: Write failed for file %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			close(fd1);
 			close(fd2);
 			exit(99);
