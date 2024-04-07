@@ -14,7 +14,7 @@ int open_source_file(const char *filename)
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from %s\n", filename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename);
 		exit(98);
 	}
 	return (fd);
